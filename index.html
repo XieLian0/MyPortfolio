@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My web portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1e1e1e;
+            /* как в шаблоне */
+            color: #000;
+            font-family: "Inter", "Roboto", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            max-width: 900px;
+            background-color: #f4f4f4;
+            border-radius: 12px;
+            margin: 30px auto;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        
+        .title_nav_name {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .title_left {
+            flex: 2;
+        }
+
+        .title_right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .myphoto {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
+            background-color: #d9d9d9;
+        }
+
+         .myname {
+            font-size: 36px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .myCc,
+        .myWeb,
+        .mycontackts {
+            font-size: 18px;
+            font-weight: 400;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .webNavToMySite {
+            margin-top: 20px;
+        }
+
+        .webNav_list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .webNav_item {
+            background-color: #e3e3e3;
+            border-radius: 10px;
+            text-align: center;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .webNav_item:hover {
+            background-color: #d0d0d0;
+            transform: translateY(-3px);
+        }
+
+        .webNav_link {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .footer {
+            margin-top: 30px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #333;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="title_nav_name">
+            <div class="title_left">
+                <h1 class="myname">Привет, меня зовут Дарига</h1>
+                <h2 class="myCc">Я студент Алматинского вуза АУЭС</h2>
+                <h2 class="myWeb">И это мой первый веб сайт потфолио</h2>
+                <h2 class="mycontackts">И вот по этой почте можете со мной связаться : moldabaeva@gmail.com</h2>
+            </div>
+            <div class="title_right">
+                <img class="myphoto" src="img/dari.png" alt="myphoto">
+            </div>
+            <nav class="webNavToMySite">
+                <ul class="webNav_list">
+                    <li class="webNav_item"><a class="webNav_link" href="myTalent.html">Мои таланты</a></li>
+                    <li class="webNav_item"><a class="webNav_link" href="myHobby.html">Мои хобби</a></li>
+                    <li class="webNav_item"><a class="webNav_link" href="myFamily.html">Моя семья</a></li>
+                    <li class="webNav_item"><a class="webNav_link" href="myFriend.html">Мои подруги</a></li>
+                    <li class="webNav_item"><a class="webNav_link" href="mySchollMemory.html">Мои школьные
+                            воспоминания</a></li>
+                    <li class="webNav_item"><a class="webNav_link" href="myFyture.html">Мои планы на будущее</a></li>
+                    <li class="webNav_item"><a class="webNav_link" href="mystudying.html">Мои учебные работы</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+
+    <footer class="footer">
+        <p class="footer_text">© 2025 Дарига Молдабаева</p>
+    </footer>
+
+</body>
+
+</html>

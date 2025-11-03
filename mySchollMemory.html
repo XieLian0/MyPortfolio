@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои школьные воспоминания</title>
+    <style>
+        body {
+
+            background-color: #1e1e1e;
+            ;
+            color: #040000;
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .schoolMemory {
+            max-width: 1000px;
+            width: 90%;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: #fffdfd;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .schoolMemory_title {
+            font-size: 42px;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #000207;
+            letter-spacing: 2px;
+        }
+
+        .schoolMemory_intro {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #080000;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .schoolMemory_item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            gap: 30px;
+        }
+
+        .schoolMemory_item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .memory_text {
+            flex: 1;
+            background: #dcdcdc;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .memory_text:hover {
+            transform: translateY(-5px);
+        }
+
+        .memory_text h2 {
+            font-size: 26px;
+            color: #7aa2ff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .memory_text p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #050000;
+            margin: 0;
+        }
+
+        .memory_line {
+            width: 5px;
+            height: 120px;
+            background-color: #7aa2ff;
+            border-radius: 3px;
+        }
+
+        /* Кнопка назад */
+        .back-home {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .back-button {
+            background-color: #5b83e3;
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 26px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(91, 131, 227, 0.4);
+        }
+
+        .back-button:hover {
+            background-color: #436bd4;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .schoolMemory_item {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .schoolMemory_item:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .memory_line {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="schoolMemory">
+        <h1 class="schoolMemory_title">Мои школьные воспоминания</h1>
+        <p class="schoolMemory_intro">
+            В школе я пережила множество моментов — от весёлых шалостей до трогательных прощаний.
+            Это время навсегда останется в памяти как особенный, яркий этап моей жизни.
+        </p>
+
+        <div class="schoolMemory_item">
+            <div class="memory_text">
+                <h2>Весёлое воспоминание</h2>
+                <p>Однажды на перемене мы с друзьями устроили мини-фотосессию в школьном коридоре.
+                    Мы смеялись, придумывали забавные позы, а потом весь класс долго рассматривал фотографии
+                    и вспоминал этот день с улыбкой.</p>
+            </div>
+            <div class="memory_line"></div>
+        </div>
+
+        <div class="schoolMemory_item">
+            <div class="memory_text">
+                <h2>Трогательное воспоминание</h2>
+                <p>Перед выпускным мы всей компанией остались после уроков, чтобы украсить класс.
+                    Мы слушали музыку, клеили гирлянды и писали пожелания друг другу.
+                    Атмосфера была такая тёплая, что этот вечер запомнился надолго.</p>
+            </div>
+            <div class="memory_line"></div>
+        </div>
+
+        <div class="schoolMemory_item">
+            <div class="memory_text">
+                <h2>Учебное воспоминание</h2>
+                <p>Помню, как мы готовились к важному экзамену всей группой.
+                    Мы помогали друг другу с трудными темами и делились конспектами.
+                    Благодаря этой поддержке мы успешно сдали экзамен и почувствовали силу командной работы.</p>
+            </div>
+            <div class="memory_line"></div>
+        </div>
+    </section>
+
+    <div class="back-home">
+        <a href="index.html" class="back-button"> На главную</a>
+    </div>
+
+</body>
+
+</html>

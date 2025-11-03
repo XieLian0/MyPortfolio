@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои подруги</title>
+  <style>
+    /* ===== Общие стили ===== */
+    body {
+      background-color: #1e1e1e;
+      /* фон как у первой страницы */
+      font-family: "Inter", sans-serif;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    /* ===== Основной блок ===== */
+    .myFriend {
+      background-color: #f4f4f4;
+      border-radius: 16px;
+      margin: 60px auto;
+      padding: 40px;
+      max-width: 900px;
+      width: 90%;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .myFriend_title {
+      font-size: 34px;
+      font-weight: 800;
+      color: #000;
+      margin-bottom: 30px;
+    }
+
+    /* ===== Слайдер ===== */
+    .slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.6s ease;
+      width: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .slide img {
+      width: 45%;
+      max-width: 350px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .friend_text {
+      width: 50%;
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    .friend_name {
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    /* ===== Кнопки переключения ===== */
+    .slider_buttons {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .btn {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      pointer-events: all;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* ===== Адаптив ===== */
+    @media (max-width: 768px) {
+      .slide {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .slide img {
+        width: 80%;
+        height: auto;
+      }
+
+      .friend_text {
+        width: 90%;
+        text-align: center;
+      }
+    }
+
+    /* ===== Кнопка возврата ===== */
+    .back-home {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .back-button {
+      background-color: #6a9cf3;
+      /* приятный голубой */
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-button:hover {
+      background-color: #4a84e0;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="back-home">
+    <a href="index.html" class="back-button"> На главную страницу</a>
+  </div>
+
+
+  <section class="myFriend">
+    <h2 class="myFriend_title">А вот и мои хорошие подруги</h2>
+
+    <div class="slider">
+      <div class="slides">
+
+        <div class="slide">
+          <img src="img/photo_2025-11-04_00-28-52.jpg" alt="Арина">
+          <div class="friend_text">
+            <div class="friend_name">Арина</div>
+            <p>Моя подруга Арина — умная, целеустремлённая и очень начитанная девушка.
+              Она обожает русский язык и литературу, всегда интересно рассказывает о прочитанных книгах.
+              Арина — победительница олимпиад, вдохновляющая своим трудолюбием и любовью к знаниям.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="img/photo_2025-11-04_00-29-07.jpg" alt="Лиза">
+          <div class="friend_text">
+            <div class="friend_name">Лиза</div>
+            <p>Моя подруга Лиза — добрая и талантливая. Она любит рисовать и училась со мной в художественной школе.
+              Мы часто делимся идеями и поддерживаем друг друга в творчестве.
+              Она умеет видеть красоту в простом и вдохновлять окружающих.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="img/photo_2025-11-04_00-28-57.jpg" alt="Василина">
+          <div class="friend_text">
+            <div class="friend_name">Василина</div>
+            <p>Моя школьная подруга Василина — активная, весёлая и дружелюбная.
+              Она занимается спортом и всегда полна энергии.
+              В школе мы проводили время вместе, смеялись и помогали друг другу — она всегда умела поднять настроение.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider_buttons">
+        <button class="btn prev">❮</button>
+        <button class="btn next">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const slideElements = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let index = 0;
+
+    function showSlide(n) {
+      index = (n + slideElements.length) % slideElements.length;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => showSlide(index - 1));
+    nextBtn.addEventListener('click', () => showSlide(index + 1));
+  </script>
+
+</body>
+
+</html>

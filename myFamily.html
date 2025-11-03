@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myFamily</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #000;
+            font-family: "Inter", "Roboto", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .myFamily {
+            width: 100%;
+            max-width: 900px;
+            background-color: #f4f4f4;
+            border-radius: 16px;
+            margin: 50px auto;
+            padding: 40px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+
+        .myFamily_title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #000;
+            text-align: center;
+            margin-bottom: 30px;
+            margin-left: 35px;
+        }
+
+        .myFamily_list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .myFamily_item {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .myFamily_photo {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .myFamily_photo_wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .myFamily_photo_wrapper img {
+            width: 100%;
+            height: 400px;
+            border-radius: 12px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .myFamily_text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(30, 30, 30, 0.85);
+            color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            border-radius: 12px;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+            padding: 25px;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-y: auto;
+        }
+
+        .myFamily_photo_wrapper:hover .myFamily_text {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .myFamily_photo_wrapper:hover img {
+            filter: blur(2px) brightness(0.7);
+            transform: scale(1.02);
+        }
+
+        .i {
+            margin-top: 40px;
+            background-color: #e9e9e9;
+            border-radius: 12px;
+            padding: 25px;
+            font-size: 18px;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .i h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .back-home {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .back-button {
+            background-color: #6a9cf3;
+            /* приятный голубой */
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button:hover {
+            background-color: #4a84e0;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back-home">
+        <a href="index.html" class="back-button"> На главную страницу</a>
+    </div>
+
+    <section class="myFamily">
+        <h2 class="myFamily_title">Моя семья</h2>
+        <ul class="myFamily_list">
+
+            <li class="myFamily_item">Моя мама</li>
+            <div class="myFamily_photo_wrapper">
+                <img class="myFamily_photo" src="img/photo_2025-11-04_00-20-32.jpg" alt="моя мама">
+                <div class="myFamily_text">
+                    Моя мама — самый добрый и заботливый человек. Она всегда окружает нашу семью теплом, вниманием и
+                    любовью.
+                    Мама — настоящая хранительница домашнего уюта, всё делает с душой и заботой о близких. Она
+                    домохозяйка,
+                    но её труд невозможно переоценить: благодаря ей в доме всегда порядок, вкусная еда и уютная
+                    атмосфера.
+                </div>
+            </div>
+
+            <li class="myFamily_item">Мой брат</li>
+            <div class="myFamily_photo_wrapper">
+                <img class="myFamily_photo" src="img/photo_2025-11-04_01-16-29.jpg" alt="мой брат">
+                <div class="myFamily_text">
+                    Мой брат — человек с широким кругозором и впечатляющим профессиональным путём. Он окончил
+                    университет по
+                    специальности «Металлургия», работал инженером, а затем стал программистом. Он целеустремлённый и
+                    ответственный,
+                    всегда стремится к новому и вдохновляет примером.
+                </div>
+            </div>
+
+            <li class="myFamily_item">Мой отец</li>
+            <div class="myFamily_photo_wrapper">
+                <img class="myFamily_photo" src="img/photo_2025-11-04_02-27-55.jpg" alt="мой отец">
+                <div class="myFamily_text">
+                    Мой отец — трудолюбивый и ответственный человек, работает начальником отдела на ферросплавном
+                    заводе.
+                    Он пример дисциплины, настойчивости и заботливости — человек, на которого всегда можно положиться.
+                </div>
+            </div>
+
+            <li class="myFamily_item">Брат и мама вместе</li>
+            <div class="myFamily_photo_wrapper">
+                <img class="myFamily_photo" src="img/photo_2025-11-04_00-20-27.jpg" alt="моя семья">
+                <div class="myFamily_text">
+                    Это мой брат и мама вместе — мои родные, любимые ❤️
+                </div>
+            </div>
+        </ul>
+
+        <div class="i">
+            <h2>Про меня</h2>
+            Я — целеустремлённый, ответственный и творческий человек. Моё главное увлечение — рисование, особенно
+            цифровое.
+            Я училась в художественной школе, успешно защитила диплом и продолжаю развиваться. Люблю компьютерные игры и
+            игру
+            на синтезаторе, они помогают мне черпать вдохновение.
+        </div>
+    </section>
+
+
+</body>
+
+</html>

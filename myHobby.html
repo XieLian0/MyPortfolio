@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои хобби</title>
+  <style>
+    body {
+      background-color: #1c1c1c;
+      font-family: "Inter", sans-serif;
+      color: #050505;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .myHobby {
+      max-width: 900px;
+      width: 90%;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 20px;
+      background-color: #faf9f9;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .myHobby_title {
+      font-size: 34px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .myHobby_list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .myHobby_item {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* ===== Слайдер ===== */
+    .slider {
+      position: relative;
+      width: 800px;
+      height: 400px;
+      overflow: hidden;
+      margin: 0 auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+      background-color: #111;
+    }
+
+    .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 1s ease-in-out;
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #181818;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 20px;
+    }
+
+    /* ===== Статичная галерея ===== */
+    .static-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .static-gallery img {
+      width: 380px;
+      height: 300px;
+      object-fit: contain;
+      border-radius: 16px;
+      background-color: #111;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    }
+
+    /* ===== Кнопка назад ===== */
+    .back-home {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .back-button {
+      background-color: #5b83e3;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(91, 131, 227, 0.4);
+    }
+
+    .back-button:hover {
+      background-color: #436bd4;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+
+  <section class="myHobby">
+    <h2 class="myHobby_title">Мои хобби</h2>
+    <ul class="myHobby_list">
+
+      <!-- 1. Рисование -->
+      <li class="myHobby_item">Рисование</li>
+      <div class="slider">
+        <div class="slides">
+          <div class="slide"><img src="img/photo_2025-11-03_23-51-12.jpg" alt="Рисование 1"></div>
+          <div class="slide"><img src="img/photo_2025-11-03_23-51-20.jpg" alt="Рисование 2"></div>
+          <div class="slide"><img src="img/photo_2025-11-03_23-51-26.jpg" alt="Рисование 3"></div>
+          <div class="slide"><img src="img/photo_2025-11-03_23-51-31.jpg" alt="Рисование 4"></div>
+        </div>
+      </div>
+
+      <!-- 2. Компьютерные игры -->
+      <li class="myHobby_item">Компьютерные игры</li>
+      <div class="slider">
+        <div class="slides">
+          <div class="slide"><img src="img/photo_2025-11-03_23-57-36.jpg" alt="игра 1"></div>
+          <div class="slide"><img src="img/photo_2025-11-03_23-57-41.jpg" alt="игра 2"></div>
+          <div class="slide"><img src="img/photo_2025-11-03_23-57-47.jpg" alt="игра 3"></div>
+          <div class="slide"><img src="img/photo_2025-11-03_23-57-52.jpg" alt="игра 4"></div>
+          <div class="slide"><img src="img/photo_2025-11-03_23-57-58.jpg" alt="игра 5"></div>
+        </div>
+      </div>
+
+      <!-- 3. Синтезатор -->
+      <li class="myHobby_item">Игра на синтезаторе</li>
+      <div class="static-gallery">
+        <img src="img/hq2.jpg" alt="синтезатор 1">
+        <img src="img/oar2.jpg" alt="синтезатор 2">
+      </div>
+
+    </ul>
+  </section>
+
+  <div class="back-home">
+    <a href="index.html" class="back-button"> На главную</a>
+  </div>
+
+  <script>
+    // Автопрокрутка слайдов
+    const sliders = document.querySelectorAll('.slider');
+    sliders.forEach(slider => {
+      const slides = slider.querySelector('.slides');
+      const count = slides.children.length;
+      let index = 0;
+      setInterval(() => {
+        index = (index + 1) % count;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+      }, 1500);
+    });
+  </script>
+
+</body>
+</html>

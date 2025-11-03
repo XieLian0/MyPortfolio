@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои планы на будущее</title>
+    <style>
+        /* ===== Общие стили ===== */
+        body {
+            background-color: #1e1e1e;
+            /* тот же фон, что и на других страницах */
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .myFutureplans {
+            background-color: #f4f4f4;
+            max-width: 900px;
+            width: 90%;
+            margin: 60px auto;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .myFutureplans ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* ===== Блоки планов ===== */
+        .myFutureplans_item {
+            background-color: #ffffff;
+            border-radius: 14px;
+            padding: 20px 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            font-size: 18px;
+            color: #222;
+            line-height: 1.6;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+        }
+
+        /* ——— Чередуем положение блоков ——— */
+        .myFutureplans_item:nth-child(odd) {
+            align-self: flex-start;
+            background-color: #fefefe;
+            border-left: 6px solid #6a9cf3;
+        }
+
+        .myFutureplans_item:nth-child(even) {
+            align-self: flex-end;
+            background-color: #ffffff;
+            border-right: 6px solid #f3a46a;
+        }
+
+        /* ===== Заголовки ===== */
+        .myFutureplans_item::before {
+            content: attr(data-title);
+            font-weight: 700;
+            font-size: 22px;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        /* ===== Эффект при наведении ===== */
+        .myFutureplans_item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ===== Адаптив ===== */
+        @media (max-width: 768px) {
+            .myFutureplans_item {
+                width: 100%;
+                align-self: center !important;
+            }
+        }
+
+        /* ===== Кнопка возврата ===== */
+        .back-home {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .back-button {
+            background-color: #6a9cf3;
+            /* приятный голубой */
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button:hover {
+            background-color: #4a84e0;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back-home">
+        <a href="index.html" class="back-button"> На главную страницу</a>
+    </div>
+
+
+    <section class="myFutureplans">
+        <ul>
+            <li class="myFutureplans_item" data-title="Через 5 лет">
+                <p>Я вижу себя уверенным и целеустремлённым специалистом, который продолжает развиваться в своей
+                    профессии. Хочу совершенствовать свои навыки, набираться опыта и реализовывать творческие идеи. Для
+                    меня важно найти дело, которое приносит не только стабильность, но и вдохновение.</p>
+            </li>
+
+            <li class="myFutureplans_item" data-title="Через 10 лет">
+                <p>Я хочу добиться устойчивого положения в карьере и, возможно, занять руководящую или ведущую
+                    должность. Мечтаю о собственных проектах, которые будут приносить пользу людям и позволят раскрывать
+                    мой потенциал.</p>
+            </li>
+
+            <li class="myFutureplans_item" data-title="Через 20 лет">
+                <p>Я представляю себя человеком с богатым опытом, уверенным в своих силах и достигшим поставленных
+                    целей. Хочу иметь семью, уютный дом и возможность путешествовать, открывая новые места и культуры.
+                </p>
+            </li>
+
+            <li class="myFutureplans_item" data-title="Через 30 лет">
+                <p>Я надеюсь стать наставником для молодых специалистов, передавать им знания и вдохновлять на развитие.
+                    Мне хотелось бы, чтобы к этому времени моя жизнь была наполнена гармонией, стабильностью и
+                    внутренним спокойствием.</p>
+            </li>
+
+            <li class="myFutureplans_item" data-title="Через 40 лет">
+                <p>Я вижу себя мудрым, уважаемым человеком, окружённым близкими и родными. Хочу с теплом оглядываться на
+                    прожитые годы, зная, что смог реализовать свои мечты и прожить жизнь с любовью, пользой и смыслом.
+                </p>
+            </li>
+        </ul>
+    </section>
+
+</body>
+
+</html>

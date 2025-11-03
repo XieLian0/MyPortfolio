@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои учебные работы</title>
+  <style>
+    body {
+      background-color: #121212;
+      font-family: "Inter", sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    .myStyding {
+      background-color: #ffffff;
+      width: 85%;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 60px;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .titleLAb {
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: center;
+      color: #333;
+      margin-bottom: 40px;
+      width: 90%;
+    }
+
+    .MyLAbWorks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      width: 100%;
+    }
+
+    .lab-card {
+      background-color: #f4f6fa;
+      border-radius: 20px;
+      width: 330px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+
+    .lab-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .lab-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.2);
+    }
+
+    .lab-card h3 {
+      color: #5b83e3;
+      font-size: 20px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .lab-card p {
+      color: #333;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background-color: #5b83e3;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin: 5px;
+    }
+
+    .download-btn:hover {
+      background-color: #3b63c9;
+      transform: translateY(-3px);
+    }
+
+    /* Кнопка возврата */
+    .back-home {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .back-button {
+      background-color: #5b83e3;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(91, 131, 227, 0.4);
+    }
+
+    .back-button:hover {
+      background-color: #436bd4;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .MyLAbWorks {
+        flex-direction: column;
+        align-items: center;
+      }
+      .lab-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="myStyding">
+    <p class="titleLAb">
+      В течение учебного периода я изучила множество интересных и важных тем по различным предметам.
+      На ИКТ я освоила работу с программами Word, Excel, PowerPoint, Access, а также познакомилась с основами макросов,
+      что помогло лучше понять возможности офисных приложений и автоматизацию задач.
+      На физике мы изучали кинематику, магнитное поле и силу тока, что позволило глубже разобраться в законах движения
+      и взаимодействия тел.
+      На уроках дифференциального и интегрального исчисления я изучила теорему Лагранжа, что укрепило мои
+      аналитические навыки и логическое мышление.
+    </p>
+
+    <div class="MyLAbWorks">
+      <div class="lab-card">
+        <h3>Лабораторная работа №1</h3>
+        <p>Работа с документами Word — создание таблиц, стилей и макросов.</p>
+        <a href="docs/Лаб5 Молдабаева Дарига.docx" class="download-btn" download>📄 Скачать Word</a>
+      </div>
+
+      <div class="lab-card">
+        <h3>Лабораторная работа №2</h3>
+        <p>Анализ данных и формулы в Excel, построение графиков и диаграмм.</p>
+        <a href="docs/Ведомость11.xlsx" class="download-btn" download>📊 Скачать Excel</a>
+      </div>
+
+      <div class="lab-card">
+        <h3>Лабораторная работа №3</h3>
+        <p>Создание презентации PowerPoint по теме “Моя школа”.</p>
+        <a href="docs/Моя школа. Мой класс.pptx" class="download-btn" download> Скачать PowerPoint</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-home">
+    <a href="index.html" class="back-button">На главную</a>
+  </div>
+
+  <script>
+    // Анимация появления карточек при прокрутке
+    const cards = document.querySelectorAll('.lab-card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
